@@ -1,0 +1,95 @@
+.overlay, .modal-wrap
+	display: none
+	z-index: 999
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#000, 0.7)
+	overflow-y: scroll
+.modal-wrap
+	background-color: transparent
+	transform-style: preserve-3d
+	transform: perspective(1000)
+	backface-visibility: hidden
+	&-close
+		z-index: 11
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+
+.modal
+	position: absolute
+	top: 10vh
+	left: 50%
+	border: 1px solid #f78449
+	margin-bottom: 8vw
+	background-color: #1a1a1a
+	color: #fff
+	width: 26vw
+	transition: all 0.8s ease
+	transform-style: preserve-3d
+	z-index: 77
+	transform: perspective(3400) rotateZ(27deg) rotateY(-72deg) translateX(-50%)
+	&:before
+		content: ''
+		position: absolute
+		left: 50%
+		top: 50%
+		width: calc(100% - 18px)
+		height: calc(100% - 18px)
+		border: 1px solid #f78449
+		transform: translate(-50%, -50%)
+	&.active
+		transform: perspective(3400) rotateZ(0) rotateY(0) translateX(-50%)
+	&-card
+		transition: all 0.3s ease
+		padding: 3vw 2vw
+		padding-top: 4vw
+		transform-style: preserve-3d
+		transform: perspective(900) rotateY(-40deg) translateX(59%)
+		animation-fill-mode:forwards
+		&.active
+			animation: d3 800ms linear 0ms 1 normal both
+		&.closed
+			animation: d3-end 400ms linear 0ms 1 normal both
+	&-min
+		width: 31vw
+	&-mb
+		width: 80vw
+	&-big
+		width: 51vw
+	&-big2
+		width: 55vw
+	&-sm
+		width: 36vw
+
+
+.close
+	position: absolute
+	right: 0
+	top: 0
+	width: 1.5vw
+	height: 1.5vw
+	transform: translate(-100%, 100%)
+	cursor: pointer
+	z-index: 99
+.close:before, .close:after
+	position: absolute
+	left: 50%
+	content: ' '
+	height: 100%
+	width: 2px
+	background-color: #c7cbcf
+	transition: all 0.4s
+	border-radius: 3px
+.close:before
+	transform: rotate(45deg)
+.close:after
+	transform: rotate(-45deg)
+.close:hover 
+	&:before, &:after
+		background-color: #f78449

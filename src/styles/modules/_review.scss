@@ -1,0 +1,145 @@
+.review {
+  position: relative;
+  padding-bottom: 0;
+
+  &__subtitle {
+    font-family: Philosopher, sans-serif;
+  }
+
+  &__right {
+    position: absolute;
+    top: 11vw;
+    right: 9vw;
+
+    &-img {
+      img {
+        max-width: 34.479vw;
+      }
+    }
+  }
+
+  &__link {
+    color: #fe4b59;
+    padding-bottom: 0.260vw;
+    border-bottom: 1px dotted #fe4b59;
+    position: absolute;
+    transition: .2s;
+
+    &:hover {
+      color: #629cdf;
+      border-color: #629cdf;
+    }
+
+    &:first-child {
+      top: 4vw;
+      right: 23vw;
+    }
+
+    &:last-child {
+      bottom: 3.8vw;
+      right: -1vw;
+    }
+  }
+
+  &__left {
+    display: flex;
+
+    &-img {
+      position: relative;
+
+      img {
+        max-width: 39.323vw;
+      }
+    }
+  }
+
+  &__play {
+    width: 5.208vw;
+    height: 5.208vw;
+    background-color: #fe4b59;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      max-width: 1.615vw;
+    }
+
+    &-pulse {
+      width: 5.208vw;
+      height: 5.208vw;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .review {
+    &__right {
+      top: 11rem;
+      right: 9rem;
+
+      &-img {
+        img {
+          max-width: 28rem;
+        }
+      }
+    }
+
+    &__link {
+      padding-bottom: 0.3rem;
+
+      &:first-child {
+        top: 4rem;
+        right: 14rem;
+      }
+
+      &:last-child {
+        bottom: 4rem;
+        right: -5rem;
+      }
+    }
+
+    &__left {
+      &-img {
+        img {
+          max-width: 35rem;
+        }
+      }
+    }
+
+    &__play {
+      width: 5rem;
+      height: 5rem;
+
+      img {
+        max-width: 1.5rem;
+      }
+
+      &-pulse {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .review__right {
+    display: none;
+  }
+
+  .review__left {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 567px) {
+  .review__left-img img {
+    max-width: 31rem;
+  }
+}

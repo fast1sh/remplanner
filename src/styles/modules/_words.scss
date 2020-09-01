@@ -1,0 +1,119 @@
+.words {
+  padding-top: 0;
+  padding-bottom: 2vw;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: Philosopher, sans-serif;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+
+    .words__item:first-child {
+      margin-right: 3vw;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2vw;
+    position: relative;
+
+    &:hover {
+      .words__item-hover {
+        opacity: 1;
+      }
+    }
+
+    &.active {
+      img {
+        opacity: 1;
+      }
+
+      .words__item-img::before {
+        width: 106%;
+      }
+    }
+
+    &-hover {
+      padding: 1.458vw 2.448vw;
+      border-radius: 15px;
+      background-color: #f4f4f4;
+      position: absolute;
+      top: -6vw;
+      opacity: 0;
+      transition: 0.2s;
+      pointer-events: none;
+    }
+
+    &-img {
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 0.781vw;
+        background-color: #282828;
+        width: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -1vw;
+        transition: 2s;
+      }
+    }
+
+    img {
+      cursor: pointer;
+      opacity: 0.3;
+      transition: 2s;
+    }
+
+    &:nth-child(1) {
+      .words__item-img {
+        display: flex;
+        max-width: 37.656vw;
+      }
+    }
+
+    &:nth-child(2) {
+      .words__item-img {
+        display: flex;
+        max-width: 39.740vw;
+      }
+    }
+
+    &:nth-child(3) {
+      .words__item-img {
+        display: flex;
+        max-width: 64.792vw;
+      }
+    }
+
+    &:nth-child(4) {
+      .words__item-img {
+        display: flex;
+        max-width: 80.729vw;
+      }
+    }
+
+    &:nth-child(5) {
+      .words__item-img {
+        display: flex;
+        max-width: 53.958vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .words {
+    display: none;
+  }
+}

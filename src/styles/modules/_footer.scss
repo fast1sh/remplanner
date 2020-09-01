@@ -1,0 +1,42 @@
+.footer {
+  background-color: #fff;
+  padding: 1.458vw 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text-strong {
+    font-family: Philosopher, sans-serif;
+  }
+
+  &__link {
+    color: #fe4b59;
+    transition: .2s;
+
+    &:hover {
+      color: #629cdf;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__item {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,271 @@
+.face {
+  padding-bottom: 0;
+  padding-top: 10vw;
+  margin-top: -10vw;
+  background: url("../img/face/bg.png") center no-repeat;
+  background-size: cover;
+
+  &__wrapper {
+    margin-bottom: 0.5vw;
+    display: flex;
+  }
+
+  &__subtitle {
+    font-family: Philosopher, sans-serif;
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 6.198vw;
+
+    &::before {
+      content: '';
+      width: 6.927vw;
+      height: 5vw;
+      position: absolute;
+      background-image: url("../img/face/quotes.png");
+      background-size: cover;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__right {
+    position: relative;
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: 4vw;
+    z-index: 2;
+
+    &-top {
+      padding: 0.469vw 0.781vw;
+      border-radius: 5px;
+      background-color: #fefefd;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -2vw;
+      width: fit-content;
+    }
+
+    &-bot {
+      padding: 0.573vw 1.563vw;
+      border-radius: 5px;
+      background-color: #fefefd;
+      font-family: Philosopher, sans-serif;
+    }
+  }
+
+  &__photo {
+    position: relative;
+    z-index: 1;
+
+    img {
+      max-width: 23.906vw;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 4vw;
+    right: -16vw;
+
+    img {
+      max-width: 24.271vw;
+    }
+  }
+
+  &__form {
+    padding: 2.344vw 3.646vw;
+    box-shadow: 0 0 0 0.521vw #fff, 0 0 101px rgba(40, 40, 40, 0.1);
+    border-radius: 15px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+
+    &-title {
+      font-family: Philosopher, sans-serif;
+    }
+
+    &-wrapper {
+      margin-right: 5.729vw;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 1px;
+        height: 7.344vw;
+        background: #cacaca;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -2.8vw;
+      }
+
+      &:last-child {
+        margin-right: 0;
+        flex-grow: 1;
+        text-align: center;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &-input {
+      padding-left: 1.563vw;
+      height: 3.906vw;
+      border-radius: 100px;
+      background-color: #f5f5f5;
+      border: none;
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1vw;
+      }
+    }
+
+    &-btn {
+      height: 3.906vw;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .face {
+    padding-top: 10rem;
+    margin-top: -10rem;
+
+    &__wrapper {
+      margin-bottom: 0.5rem;
+    }
+
+    &__text {
+      padding-left: 6rem;
+
+      &::before {
+        width: 7rem;
+        height: 5rem;
+      }
+    }
+
+    &__badge {
+      bottom: 3rem;
+
+      &-top {
+        padding: 0.5rem 0.8rem;
+        top: -3rem;
+      }
+
+      &-bot {
+        padding: 1rem 2rem;
+      }
+    }
+
+    &__photo {
+      display: flex;
+      img {
+        max-width: 24rem;
+      }
+    }
+
+    &__img {
+      top: 4rem;
+      right: -16rem;
+
+      img {
+        max-width: 25rem;
+      }
+    }
+
+    &__form {
+      padding: 2.3rem 3.5rem;
+
+      &-wrapper {
+        margin-right: 5rem;
+
+        &::after {
+          height: 7rem;
+          right: -2.8rem;
+        }
+      }
+
+      &-input {
+        padding-left: 1.5rem;
+        height: 4rem;
+
+        &-wrapper {
+          padding: 0 1rem;
+        }
+      }
+
+      &-btn {
+        height: 4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .face {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__badge {
+      left: 0;
+    }
+
+    &__right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    &__form {
+      flex-direction: column;
+      width: 58rem;
+      text-align: center;
+
+      &-wrapper {
+        margin-right: 0;
+        margin-bottom: 2rem;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .face {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__form {
+      width: 31rem;
+      padding: 2.3rem 3rem;
+    }
+
+    &__left {
+      margin-bottom: 1rem;
+    }
+
+    &__right {
+      justify-content: center;
+    }
+  }
+}

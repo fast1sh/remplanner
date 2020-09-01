@@ -1,0 +1,30 @@
+.lines {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 0;
+  width: 79.792vw;
+  z-index: -1;
+  animation: lines 10s linear forwards;
+
+  &__item {
+    width: 1px;
+    height: 100%;
+    position: relative;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+}
+
+@keyframes lines {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}

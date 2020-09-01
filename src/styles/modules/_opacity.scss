@@ -1,0 +1,342 @@
+.opacity {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 2vw;
+
+  &__subtitle {
+    font-family: Philosopher, sans-serif;
+  }
+
+  &__text {
+    position: absolute;
+    right: 17vw;
+    top: -2.4vw;
+
+    img {
+      position: absolute;
+      max-width: 6.094vw;
+      max-height: unset;
+      left: -6.7vw;
+      top: 1vw;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 1.563vw;
+    position: relative;
+    border-radius: 15px;
+    background: #f4f4f4 url("../img/opacity/1-light.png") right no-repeat;
+    background-size: cover;
+    width: 49%;
+
+    &-wrapper {
+      position: relative;
+      padding: 3.906vw 0 2.292vw 3.438vw;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &::before {
+        content: 'Качество';
+        color: #e9e7e7;
+        font-family: Philosopher;
+        font-size: 5.208vw;
+        position: absolute;
+        left: -1.5vw;
+        top: 0;
+      }
+    }
+
+    &-title {
+      font-family: Philosopher, sans-serif;
+      position: relative;
+      z-index: 1;
+    }
+
+    &-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    &-img {
+      position: absolute;
+      right: -4.2vw;
+      top: 3.4vw;
+      display: flex;
+      max-width: 19.010vw;
+    }
+
+    &-link {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 0.260vw;
+      color: #fe4b59;
+      border-bottom: 1px dotted #fe4b59;
+      transition: .2s;
+
+      &:hover {
+        color: #629cdf;
+        border-color: #629cdf;
+      }
+    }
+
+    &:nth-child(2) {
+      background: #e4f0f6 url("../img/opacity/2-light.png") right no-repeat;
+
+      .opacity__item {
+        &-wrapper::before {
+          content: 'Сроки';
+          color: #dae7ed;
+          font-size: 8.073vw;
+          top: unset;
+          left: unset;
+          bottom: -1vw;
+          right: -1.5vw;
+        }
+
+        &-img {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      background: #e4f0f6 url("../img/opacity/2-light.png") right no-repeat;
+
+      .opacity__item {
+        &-wrapper {
+          padding-left: 14.323vw;
+          align-items: flex-start;
+
+          &::before {
+            content: 'Гарантии';
+            color: #dae7ed;
+            font-size: 8.073vw;
+            top: unset;
+            left: unset;
+            bottom: -3.2vw;
+            right: -1.5vw;
+          }
+        }
+
+        &-img {
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      background-image: linear-gradient(to top, #0476ff 0%, #78b5fc 92%, #78b5fc 100%);
+
+      .opacity__item {
+        &-wrapper {
+          &::before {
+            content: 'Оплата';
+            color: #7cb7fc;
+            font-size: 8.073vw;
+            top: 3vw;
+            left: -3vw;
+          }
+        }
+
+        &-img {
+          top: unset;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      .opacity__item {
+        &-wrapper {
+          &::before {
+            content: 'Честность';
+            top: unset;
+            left: unset;
+            bottom: -2vw;
+            right: -0.7vw;
+          }
+        }
+
+        &-img {
+          top: unset;
+          bottom: 0;
+          right: 2vw;
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      background: #e4f0f6 url("../img/opacity/2-light.png") right no-repeat;
+
+      .opacity__item {
+        &-wrapper {
+          padding-left: 17.698vw;
+
+          &::before {
+            content: 'Сервис';
+            color: #dae7ed;
+            font-size: 8.073vw;
+            top: unset;
+            left: unset;
+            bottom: -1.5vw;
+            right: -0.7vw;
+          }
+        }
+
+        &-img {
+          left: 2vw;
+          bottom: 1vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .opacity {
+    padding-bottom: 2rem;
+
+    &__text {
+      right: 17rem;
+      top: -2.5rem;
+
+      img {
+        max-width: 6rem;
+        left: -7rem;
+        top: 1rem;
+      }
+    }
+
+    &__item {
+      margin-bottom: 1.5rem;
+
+      &-wrapper {
+        padding: 4rem 0 2rem 3rem;
+
+        &::before {
+          font-size: 5rem;
+          left: -1.5rem;
+        }
+      }
+
+      &-img {
+        right: -4.2rem;
+        top: 6.4rem;
+        max-width: 17rem;
+      }
+
+      &-link {
+        padding-bottom: 0.3rem;
+      }
+
+      &:nth-child(2) {
+        .opacity__item {
+          &-wrapper::before {
+            font-size: 8.073rem;
+            bottom: -1rem;
+            right: -1.5rem;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .opacity__item {
+          &-wrapper {
+            padding-left: 14.323rem;
+
+            &::before {
+              font-size: 8.073rem;
+              bottom: -3.2rem;
+              right: -1.5rem;
+            }
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .opacity__item {
+          &-wrapper {
+            &::before {
+              font-size: 8.073rem;
+              top: 3rem;
+              left: -3rem;
+            }
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        .opacity__item {
+          &-wrapper {
+            &::before {
+              bottom: -2rem;
+              right: -0.7rem;
+            }
+          }
+
+          &-img {
+            right: 2rem;
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        .opacity__item {
+          &-wrapper {
+            padding-left: 17.698rem;
+
+            &::before {
+              font-size: 8.073rem;
+              bottom: -1.5rem;
+              right: -0.7rem;
+            }
+          }
+
+          &-img {
+            left: 2rem;
+            bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .opacity__item-img {
+    display: none;
+  }
+
+  .opacity__item:nth-child(3) .opacity__item-wrapper {
+    padding-left: 3rem;
+  }
+
+  .opacity__item:nth-child(6) .opacity__item-wrapper {
+    padding-left: 3rem;
+  }
+
+  .opacity__text {
+    right: 3rem;
+  }
+}
+
+@media (max-width: 567px) {
+  .opacity__item {
+    width: 100%;
+  }
+
+  .opacity__text {
+    display: none;
+  }
+}

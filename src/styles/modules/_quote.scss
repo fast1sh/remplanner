@@ -1,0 +1,64 @@
+.quote {
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    padding-top: 5vw;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 6.927vw;
+      height: 5vw;
+      position: absolute;
+      background-image: url("../img/words/quotes.png");
+      background-size: cover;
+      top: 2.2vw;
+      left: -1.7vw;
+    }
+  }
+
+  &__photo {
+    margin-right: 5.208vw;
+
+    img {
+      max-width: 12.448vw;
+    }
+  }
+
+  &__subtext {
+    color: #999999;
+  }
+}
+
+@media (max-width: 900px) {
+  .quote {
+    &__wrapper {
+      padding-top: 5rem;
+
+      &::before {
+        width: 7rem;
+        height: 5rem;
+        top: 2rem;
+        left: -1.7rem;
+      }
+    }
+
+    &__photo {
+      margin-right: 5rem;
+
+      img {
+        max-width: 12rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .quote {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
