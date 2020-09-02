@@ -281,7 +281,7 @@
 @media (max-width: 767px) {
   .works {
     &__item {
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: center;
     }
 

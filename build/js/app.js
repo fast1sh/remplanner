@@ -256,7 +256,7 @@ $(window).scroll(function () {
   });
 });
 
-$('.fancy-class, works__left-slider-top-item').fancybox({
+$('.fancy-class, .works__left-slider-top-item, .review__play').fancybox({
   buttons: [
     'slideShow',
     'zoom',
@@ -271,12 +271,63 @@ $('.fancy-class, works__left-slider-top-item').fancybox({
 });
 
 $('.js-btn').on('click', function () {
+  event.preventDefault();
+  $('html').addClass('stop');
   var href = $(this).attr('href');
   $(href).fadeIn(500);
 });
 
 $('.modal__close').on('click', function () {
+  event.preventDefault();
+  $('html').removeClass('stop');
   $('.modal-overlay').fadeOut(500);
 });
 
+$('.modal-overlay').mouseup(function (e) {
+  var container = $('.modal');
+  if (container.has(e.target).length === 0 && !container.is(e.target)) {
+    $('html').removeClass('stop');
+    $('.modal-overlay').fadeOut();
+  }
+});
+
+var cookiesTest2 = get_cookie("test2");
+if (cookiesTest2 !== '' && cookiesTest2 !== null) {
+  // return false;
+} else {
+  var closeMod = false;
+  $(document).mouseleave(function (event) {
+    event = event || window.event;
+    if (event.clientY < 0 || event.clientY < 3) {
+      if (!closeMod) {
+
+        $('html').addClass('stop');
+        $('#modal-wait').fadeIn();
+
+
+        closeMod = true;
+
+
+        var date2 = new Date();
+        date2.setDate(date2.getDate() + 7);
+        date2 = date2.toUTCString();
+        document.cookie = "test2=1;expires=" + date2;
+      }
+
+    }
+  });
+
+}
+
+function get_cookie(cookie_name) {
+  var results = document.cookie.match('(^|;) ?' + cookie_name + '=([^;]*)(;|$)');
+
+  if (results)
+    return (unescape(results[2]));
+  else
+    return null;
+}
+
 new WOW().init();
+
+$('input[name="phone"]').mask('+7(999) 999-9999');

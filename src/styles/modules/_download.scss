@@ -130,16 +130,27 @@
 }
 
 @media (max-width: 900px) {
+  .download__mockup img {
+    max-width: 26rem;
+  }
+
+  .download__promo {
+    display: none;
+  }
+
+  .download__mockup {
+    position: absolute;
+    top: unset;
+    left: -10rem;
+    bottom: -5rem;
+  }
+
   .download {
     &__inner {
       padding-top: 2.5rem;
       padding-right: 0;
       padding-bottom: 4rem;
       justify-content: center;
-    }
-
-    &__mockup {
-      display: none;
     }
 
     &__form {

@@ -555,6 +555,14 @@
   }
 
   &__btn {
+    position: relative;
+
+    &:hover:disabled {
+      .quiz__progress-item-hint {
+        opacity: 1;
+      }
+    }
+
     img {
       max-width: 0.729vw;
     }
