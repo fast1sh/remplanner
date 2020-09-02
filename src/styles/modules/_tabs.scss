@@ -191,6 +191,8 @@
 
     &__left {
       margin-right: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
 
     &__right {
@@ -203,8 +205,8 @@
         left: 13rem;
 
         &-hover {
-          left: 1rem;
-          top: -8rem;
+          left: -9rem;
+          top: -9rem;
         }
       }
 
@@ -218,6 +220,7 @@
     &__nav {
       margin-bottom: 1rem;
       padding: 1.5rem 1.8rem;
+      width: 48%;
 
       &.tabs__nav--active::after {
         transform: translateY(-50%) rotate(45deg);
@@ -268,6 +271,10 @@
       }
     }
 
+    &__nav {
+      font-size: 1rem;
+    }
+
     &__item {
       .quiz__option-hint {
         display: block;
@@ -277,5 +284,9 @@
         max-width: 28.8rem;
       }
     }
+  }
+
+  br {
+    display: none;
   }
 }

@@ -242,6 +242,21 @@
       color: #fb4a59;
     }
   }
+
+  &-call {
+    &__form {
+      width: 23.438vw;
+    }
+
+    &__input {
+      height: 2.969vw;
+    }
+
+    &__btn {
+      width: 100%;
+      height: 2.969vw;
+    }
+  }
 }
 
 @media (max-width: 900px) {
@@ -339,6 +354,20 @@
         img {
           max-width: 1.2rem;
         }
+      }
+    }
+
+    &-call {
+      &__form {
+        width: 30rem;
+      }
+
+      &__input {
+        height: 5rem;
+      }
+
+      &__btn {
+        height: 5rem;
       }
     }
   }

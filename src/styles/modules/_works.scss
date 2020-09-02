@@ -197,6 +197,10 @@
 
         &.slick-prev {
           left: 1rem;
+
+          &::before {
+            right: 23%;
+          }
         }
 
         &.slick-next {

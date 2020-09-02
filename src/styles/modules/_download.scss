@@ -10,6 +10,33 @@
     z-index: -1;
   }
 
+  &__promo {
+    position: absolute;
+    width: 10.833vw;
+    height: 10.833vw;
+    background: url("../img/download/promo.png") center no-repeat;
+    background-size: cover;
+    padding-top: 0.365vw;
+    left: 21vw;
+    bottom: 3.3vw;
+
+    &-big {
+      font-size: 5.885vw;
+      font-family: Philosopher, sans-serif;
+    }
+
+    &-mid {
+      font-size: 1.771vw;
+      font-family: Philosopher, sans-serif;
+      margin-left: -1.49vw;
+    }
+
+    &-text {
+      font-size: 0.677vw;
+      margin-top: -0.521vw;
+    }
+  }
+
   &__inner {
     background-color: #fff;
     padding-top: 2.448vw;
@@ -153,6 +180,8 @@
 @media (max-width: 567px) {
   .download__inner {
     padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .download__form-wrapper {
@@ -162,5 +191,6 @@
 
   .download__form-input-wrapper {
     margin-right: 0;
+    margin-bottom: 1rem;
   }
 }

@@ -1,6 +1,10 @@
 .vantages {
   padding-top: 0;
 
+  &__subtitle {
+    font-family: Philosopher, sans-serif;
+  }
+
   &__wrapper {
     &-top {
       display: flex;

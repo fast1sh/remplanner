@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="./js/libs/slick/slick-theme.css">
 	<link rel="stylesheet" href="./js/libs/ion.rangeSlider.min.css">
 	<link rel="stylesheet" href="./js/libs/twentytwenty/twentytwenty.css">
+	<link rel="stylesheet" href="./js/libs/wow/animate.css">
 	<link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
@@ -60,7 +61,7 @@
 					</nav>
 		
 					<div class="header__wrapper-right">
-						<a href="#download" class="btn header__btn">
+						<a href="#modal-price" class="btn header__btn js-btn">
 							<img src="./img/header-btn.png" alt="#">
 							<span class="button-text tsm12 lt">
 								Скачайте прайс-лист
@@ -76,7 +77,7 @@
 								+7 (495) 929-70-06
 							</a>
 
-							<a href="#face" class="header__phone-link tsm12">
+							<a href="#modal-call" class="header__phone-link tsm12 js-btn">
 								Перезвоните мне
 							</a>
 						</div>
@@ -102,7 +103,7 @@
 							</span>
 						</div>
 
-						<h1 class="hero__title title fw3 msm">
+						<h1 class="hero__title title fw3 msm wow fadeInUp">
 							Сделаем 
 							<span class="hero__title-strong fw7">
 								ремонт квартиры под <br>
@@ -113,6 +114,7 @@
 						</h1>
 
 						<a href="#quiz" class="btn btn--light hero__btn">
+							<span class="btn-blick"></span>
 							<img src="./img/calc.png" class="mrm" alt="#">
 							<span class="btn-text lt tsm13">
 								Калькулятор стоимости ремонта
@@ -205,13 +207,14 @@
 	<section class="section quiz" id="quiz">
 		<div class="container">
 
-			<h2 class="quiz__title title tac t-ss fw3 msm">
-				Пройдите бесплатный тест-калькулятор и <br>
-				<span class="quiz__title-strong title">
-					Получите предварительный рассчет <br>
-					стоимости ремонта за 60 секунд
-				</span>
+			<h2 class="quiz__title title tac t-ss fw3 wow fadeInUp">
+				Пройдите бесплатный тест-калькулятор и
 			</h2>
+
+			<div class="quiz__title-strong title msm tac wow fadeInUp">
+				Получите предварительный рассчет <br>
+				стоимости ремонта за 60 секунд
+			</div>
 
 			<div class="quiz__inner">
 				<div class="quiz__loading" style="display: none;">
@@ -223,118 +226,120 @@
 					</div>
 				</div>
 
-				<div class="quiz__left mr" style="/* display: none; */">
-					<div class="quiz__left--start" style="/* display: none; */">
-						<div class="quiz__left-photo">
-							<img src="./img/quiz/left-photo.png" alt="#">
-						</div>
-						
-						<div class="quiz__left-pos tsm12 fw3">
-							Руководитель студии
-						</div>
-						
-						<div class="quiz__left-name text23 mbm">
-							Антон Красавчик
-						</div>
-						
-						<div class="quiz__left-text tsm12 tac mb">
-							Здравствуйте, меня зовут Антон, и я помогу вам <br>
-							понять какой бюджет нужен для полной <br>
-							реализации комплексного ремонта под ключ. <br>
-							Ответье на несколько вопросов, после чего я <br>
-							сориентирую Вас по стоимости
-						</div>
-						
-						<div class="quiz__left-title text21 tac fw7 mb">
-							В конце теста Вы <br>
-							получите:
-						</div>
-						
-						<div class="quiz__left-wrapper">
-							<div class="quiz__left-block">
-								<div class="quiz__left-block-text text msm">
-									<span class="quiz__left-block-text-strong fw7">
-										Смету по стоимости <br>
-									</span>
-									вашего ремонта
-								</div>
-						
-								<img src="./img/quiz/left-img1.png" alt="#">
+				<div class="quiz__left-wrap">
+					<div class="quiz__left mr" style="/* display: none; */">
+						<div class="quiz__left--start" style="/* display: none; */">
+							<div class="quiz__left-photo">
+								<img src="./img/quiz/left-photo.png" alt="#">
 							</div>
-						
-							<div class="quiz__left-block">
-								<img src="./img/quiz/left-img2.png" alt="#">
-						
-								<div class="quiz__left-block-text text mb">
-									<span class="quiz__left-block-text-strong fw7">
-										Примеры дизайн <br>
-										интерьеров квартир <br>
-									</span>
-									под Московские <br>
-									планировки <br>
-									(для вдохновления)
-								</div>
+					
+							<div class="quiz__left-pos tsm12 fw3">
+								Руководитель студии
 							</div>
-						
-							<div class="quiz__left-block">
-								<div class="quiz__left-block-text text">
-									<span class="quiz__left-block-text-strong fw7">
-										Подарок
-									</span>
-									на выбор
-								</div>
-						
-								<img src="./img/quiz/left-img3.png" alt="#">
+					
+							<div class="quiz__left-name text23 mbm">
+								Антон Красавчик
 							</div>
-						</div>
-					</div>
-
-					<div class="quiz__left--finish" style="display: none;">
-						<div class="quiz__left-title t-min fw7 tac">
-							Ваши БОНУСЫ <br>
-							открыты
-						</div>
-
-						<div class="quiz__left-wrapper">
-							<div class="quiz__left-block">
-								<div class="quiz__left-block-text text msm tac">
-									<span class="quiz__left-block-text-strong fw7">
-										Смету по <br>
-										стоимости
-									</span>
-									вашего <br>
-									ремонта
-								</div>
-							
-								<img src="./img/quiz/left-img4.png" alt="#">
+					
+							<div class="quiz__left-text tsm12 tac mb">
+								Здравствуйте, меня зовут Антон, и я помогу вам <br>
+								понять какой бюджет нужен для полной <br>
+								реализации комплексного ремонта под ключ. <br>
+								Ответье на несколько вопросов, после чего я <br>
+								сориентирую Вас по стоимости
 							</div>
-							
-							<div class="quiz__left-block">
-								<img src="./img/quiz/left-img5.png" alt="#">
-							
-								<div class="quiz__left-block-text text mb tac">
-									<span class="quiz__left-block-text-strong fw7">
-										Примеры дизайн <br>
-										интерьеров <br>
-										квартир
-									</span>
-									под <br>
-									Московские <br>
-									планировки <br>
-									(для вдохновления)
-								</div>
+					
+							<div class="quiz__left-title text21 tac fw7 mb">
+								В конце теста Вы <br>
+								получите:
 							</div>
-							
-							<div class="quiz__left-block">
-								<div class="quiz__left-block-text text tac">
-									<div class="quiz__left-block-text-strong fw7 mbm">
-										Подарок <br>
+					
+							<div class="quiz__left-wrapper">
+								<div class="quiz__left-block">
+									<div class="quiz__left-block-text text msm">
+										<span class="quiz__left-block-text-strong fw7">
+											Смету по стоимости <br>
+										</span>
+										вашего ремонта
 									</div>
-									Робот- <br>
-									пылесос
+					
+									<img src="./img/quiz/left-img1.png" alt="#">
 								</div>
-							
-								<img src="./img/quiz/left-img6.png" alt="#">
+					
+								<div class="quiz__left-block">
+									<img src="./img/quiz/left-img2.png" alt="#">
+					
+									<div class="quiz__left-block-text text mb">
+										<span class="quiz__left-block-text-strong fw7">
+											Примеры дизайн <br>
+											интерьеров квартир <br>
+										</span>
+										под Московские <br>
+										планировки <br>
+										(для вдохновления)
+									</div>
+								</div>
+					
+								<div class="quiz__left-block">
+									<div class="quiz__left-block-text text">
+										<span class="quiz__left-block-text-strong fw7">
+											Подарок
+										</span>
+										на выбор
+									</div>
+					
+									<img src="./img/quiz/left-img3.png" alt="#">
+								</div>
+							</div>
+						</div>
+					
+						<div class="quiz__left--finish" style="display: none;">
+							<div class="quiz__left-title t-min fw7 tac">
+								Ваши БОНУСЫ <br>
+								открыты
+							</div>
+					
+							<div class="quiz__left-wrapper">
+								<div class="quiz__left-block">
+									<div class="quiz__left-block-text text msm tac">
+										<span class="quiz__left-block-text-strong fw7">
+											Смету по <br>
+											стоимости
+										</span>
+										вашего <br>
+										ремонта
+									</div>
+					
+									<img src="./img/quiz/left-img4.png" alt="#">
+								</div>
+					
+								<div class="quiz__left-block">
+									<img src="./img/quiz/left-img5.png" alt="#">
+					
+									<div class="quiz__left-block-text text mb tac">
+										<span class="quiz__left-block-text-strong fw7">
+											Примеры дизайн <br>
+											интерьеров <br>
+											квартир
+										</span>
+										под <br>
+										Московские <br>
+										планировки <br>
+										(для вдохновления)
+									</div>
+								</div>
+					
+								<div class="quiz__left-block">
+									<div class="quiz__left-block-text text tac">
+										<div class="quiz__left-block-text-strong fw7 mbm">
+											Подарок <br>
+										</div>
+										Робот- <br>
+										пылесос
+									</div>
+					
+									<img src="./img/quiz/left-img6.png" alt="#">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -342,12 +347,42 @@
 
 				<div class="quiz__right" style="/* display: none; */">
 					<div class="quiz__progress mb">
-						<div class="quiz__progress-item tsm12 fw3 active">Вопрос 1</div>
-						<div class="quiz__progress-item tsm12 fw3">Вопрос 2</div>
-						<div class="quiz__progress-item tsm12 fw3">Вопрос 3</div>
-						<div class="quiz__progress-item tsm12 fw3">Вопрос 4</div>
-						<div class="quiz__progress-item tsm12 fw3">Вопрос 5</div>
-						<div class="quiz__progress-item tsm12 fw3">Вопрос 6</div>
+						<div class="quiz__progress-item tsm12 fw3 active">
+							<div class="quiz__progress-item-hint">
+								Ответьте на вопрос ниже
+							</div>
+							Вопрос 1
+						</div>
+						<div class="quiz__progress-item tsm12 fw3">
+							<div class="quiz__progress-item-hint">
+								Ответьте на вопрос ниже
+							</div>
+							Вопрос 2
+						</div>
+						<div class="quiz__progress-item tsm12 fw3">
+							<div class="quiz__progress-item-hint">
+								Ответьте на вопрос ниже
+							</div>
+							Вопрос 3
+						</div>
+						<div class="quiz__progress-item tsm12 fw3">
+							<div class="quiz__progress-item-hint">
+								Ответьте на вопрос ниже
+							</div>
+							Вопрос 4
+						</div>
+						<div class="quiz__progress-item tsm12 fw3">
+							<div class="quiz__progress-item-hint">
+								Ответьте на вопрос ниже
+							</div>
+							Вопрос 5
+						</div>
+						<div class="quiz__progress-item tsm12 fw3">
+							<div class="quiz__progress-item-hint">
+								Ответьте на вопрос ниже
+							</div>
+							Вопрос 6
+						</div>
 					</div>
 
 					<form class="quiz__content">
@@ -900,7 +935,7 @@
 	</section>
 
 	<section class="section words tac">
-		<h2 class="words__title title msm">
+		<h2 class="words__title title msm wow fadeInUp">
 			Будем честными с Вами
 		</h2>
 
@@ -998,11 +1033,11 @@
 	<section class="section vantages" id="vantages">
 		<div class="container">
 			<div class="vantages__inner">
-				<h2 class="vantages__title t-ss fw3 tac mbs">
+				<h2 class="vantages__title t-ss fw3 tac mbs wow fadeInUp">
 					Студия REMPLANER
 				</h2>
 
-				<div class="vantages__subtitle title tac msm">
+				<div class="vantages__subtitle title tac msm wow fadeInUp">
 					Мы позаботимся обо всём: <br>
 					от дизайн-проекта до финальной уборки
 				</div>
@@ -1146,11 +1181,11 @@
 	<section class="section tabs" id="tabs">
 		<div class="container">
 			<div class="tabs__inner">
-				<h2 class="tabs__title t-ss fw3 tac mbs">
+				<h2 class="tabs__title t-ss fw3 tac mbs wow fadeInUp">
 					Мы не просто говорим - мы делаем!
 				</h2>
 
-				<div class="tabs__subtitle title tac msm">
+				<div class="tabs__subtitle title tac msm wow fadeInUp">
 					Понимая всю "соль" ремонтных компаний <br>
 					на рынке мы избавим Вас от стресса <br>
 					и хлопот взяв на себя весь комплекс работ по ремонту
@@ -1369,6 +1404,17 @@
 					<img src="./img/download/mockup.png" alt="#">
 				</div>
 
+				<div class="download__promo tac lt">
+					<div class="download__promo-big">
+						-9
+						<span class="download__promo-mid">%</span>
+					</div>
+					<div class="download__promo-text">
+						ваша скидка <br>
+						на первый заказ
+					</div>
+				</div>
+
 				<form class="download__form">
 					<div class="download__badge tsm12 fw5 mb">
 						PDF: 0,8 Mb
@@ -1421,11 +1467,11 @@
 	</section>
 
 	<section class="section works" id="works">
-		<h2 class="works__title t-ss fw3 tac">
+		<h2 class="works__title t-ss fw3 tac wow fadeInUp">
 			Мы не конвеерное прозводство, поэтому каждый из наших ремонтов особенный
 		</h2>
 		
-		<div class="works__subtitle title tac mb">
+		<div class="works__subtitle title tac mb wow fadeInUp">
 			Посмотрите, как выглядят готовые ремонты этого августа
 		</div>
 
@@ -1434,11 +1480,21 @@
 				<div class="works__item">
 					<div class="works__left">
 						<div class="works__left-slider-top">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery1">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery1">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery1">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery1">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery1">
+								<img src="./img/works/1.png" alt="#">
+							</a>
 						</div>
 
 						<div class="works__left-slider-bot">
@@ -1554,11 +1610,21 @@
 				<div class="works__item">
 					<div class="works__left">
 						<div class="works__left-slider-top">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery2">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery2">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery2">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery2">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery2">
+								<img src="./img/works/1.png" alt="#">
+							</a>
 						</div>
 
 						<div class="works__left-slider-bot">
@@ -1674,11 +1740,21 @@
 				<div class="works__item">
 					<div class="works__left">
 						<div class="works__left-slider-top">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery3">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery3">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery3">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery3">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery3">
+								<img src="./img/works/1.png" alt="#">
+							</a>
 						</div>
 
 						<div class="works__left-slider-bot">
@@ -1794,11 +1870,21 @@
 				<div class="works__item">
 					<div class="works__left">
 						<div class="works__left-slider-top">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
-							<img src="./img/works/1.png" alt="#">
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery4">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery4">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery4">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery4">
+								<img src="./img/works/1.png" alt="#">
+							</a>
+							<a href="./img/works/1.png" class="works__left-slider-top-item" data-fancybox="works-gallery4">
+								<img src="./img/works/1.png" alt="#">
+							</a>
 						</div>
 
 						<div class="works__left-slider-bot">
@@ -1915,11 +2001,11 @@
 	</section>
 
 	<section class="section after">
-		<h2 class="after__title t-ss fw3 tac">
+		<h2 class="after__title t-ss fw3 tac wow fadeInUp">
 			Как преобразится ваша квартира уже через несколько недель
 		</h2>
 
-		<div class="after__subtitle title tac mlg">
+		<div class="after__subtitle title tac mlg wow fadeInUp">
 			Несколько фото до и после ремонта
 		</div>
 
@@ -1946,11 +2032,11 @@
 		<div class="container">
 			<div class="reports__inner">
 				<div class="reports__left">
-					<div class="reports__title t-ss fw3 mbs">
+					<div class="reports__title t-ss fw3 mbs wow fadeInUp">
 						После старта работы вы будете получать
 					</div>
 
-					<div class="reports__subtitle title msm">
+					<div class="reports__subtitle title msm wow fadeInUp">
 						Фото-видео отчёты об этапах <br>
 						ремонта через группу в мессенджере
 					</div>
@@ -2052,11 +2138,11 @@
 	</section>
 
 	<section class="section opacity" id="opacity">
-		<h2 class="opacity__title t-ss fw3 tac">
+		<h2 class="opacity__title t-ss fw3 tac wow fadeInUp">
 			Все прозрачно
 		</h2>
 
-		<div class="opacity__subtitle title tac mb">
+		<div class="opacity__subtitle title tac mb wow fadeInUp">
 			Вы можете быть спокойны за сроки и качество работ
 		</div>
 
@@ -2208,16 +2294,16 @@
 		</div>
 	</section>
 
-	<section class="section face" id="face">
+	<section class="section face">
 		<div class="container">
 			<div class="face__inner">
 				<div class="face__wrapper">
 					<div class="face__left">
-						<h2 class="face__title t-ss fw3 mbs">
+						<h2 class="face__title t-ss fw3 mbs wow fadeInUp">
 							От руководителей
 						</h2>
 					
-						<div class="face__subtitle title mlg">
+						<div class="face__subtitle title mlg wow fadeInUp">
 							Мы не скрываем свои лица и <br>
 							не боимся брать ответственность <br>
 							за результат нашей работы
@@ -2256,7 +2342,7 @@
 					</div>
 				</div>
 
-				<form class="face__form">
+				<form class="face__form" id="face">
 					<div class="face__form-wrapper">
 						<div class="face__form-title t-min mbm">
 							Только телефон и мы в деле!
@@ -2316,11 +2402,11 @@
 	</section>
 
 	<section class="section review">
-		<h2 class="review__title t-ss tac fw3">
+		<h2 class="review__title t-ss tac fw3 wow fadeInUp">
 			Видеоотзывы наших клиентов
 		</h2>
 
-		<div class="review__subtitle title tac mlg">
+		<div class="review__subtitle title tac mlg wow fadeInUp">
 			И да, вот, что клиенты думают о нашей работе
 		</div>
 
@@ -2361,11 +2447,11 @@
 	</section>
 
 	<section class="section steps">
-		<h2 class="steps__title t-ss tac fw3">
+		<h2 class="steps__title t-ss tac fw3 wow fadeInUp">
 			Простая схема из
 		</h2>
 
-		<div class="steps__subtitle title tac mb">
+		<div class="steps__subtitle title tac mb wow fadeInUp">
 			6 этапов как мы будем делать ваш ремонт
 		</div>
 
@@ -2517,7 +2603,7 @@
 		<div class="container-mid">
 			<div class="contacts__inner">
 				<div class="contacts__left">
-					<div class="contacts__title title msm">
+					<div class="contacts__title title msm wow fadeInUp">
 						Планируете ремонт? <br>
 						Только телефон и мы в деле!
 					</div>
@@ -2946,6 +3032,50 @@
 		</div>
 	</div>
 
+	<div class="modal-overlay" id="modal-call" style="display: none;">
+		<div class="modal modal-call">
+			<div class="modal__close modal-call__close"></div>
+
+			<form class="modal__form modal-call__form modal-price__form">
+				<div class="modal-call__title modal-price__title title fw7">
+					Заявка
+				</div>
+
+				<div class="modal-call__subtitle modal-price__subtitle t-ss fw7 mbm">
+					на консультацю <br>
+					по ремонту
+				</div>
+
+				<div class="modal-call__text text mbm">
+					Оставьте номер телефона <br>
+					и менеджер вам перезвонит
+				</div>
+
+				<input type="tel" name="phone" required class="modal-call__input modal-price__input text fw3 mbm"
+					placeholder="Ваш телефон" required>
+				
+				<button class="btn btn--light modal-call__btn mb">
+					<span class="btn-text lt ttu tsm12 fw5">Отправить</span>
+				</button>
+
+				<div class="modal-call__subtext text fw3 mbm">
+					Или
+					<span class="fw7">позвоните нам:</span>
+				</div>
+
+				<div class="header__phone">
+					<div class="header__phone-title tsm11 mbs">
+						Звоните, мы сейчас работаем
+					</div>
+				
+					<a href="tel:+7(495)9297006" class="header__phone-number text21 fw7 mbs">
+						+7 (495) 929-70-06
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<div class="modal-overlay" id="modal-download" style="display: none;">
 		<div class="modal modal-download">
 			<div class="modal__close modal-download__close"></div>
@@ -2983,7 +3113,8 @@
 	<script src="./js/libs/ion.rangeSlider.min.js"></script>
 	<script src="./js/libs/twentytwenty/jquery.event.move.js"></script>
 	<script src="./js/libs/twentytwenty/jquery.twentytwenty.js"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script src="./js/libs/wow/wow.min.js"></script>
+	
 	<!-- <script src="assets/js/libs/parallax.js"></script> -->
 	
 	<script src="./js/quiz.js"></script>

@@ -172,6 +172,7 @@
 
     &__photo {
       display: flex;
+
       img {
         max-width: 24rem;
       }
@@ -256,8 +257,8 @@
     }
 
     &__form {
-      width: 31rem;
-      padding: 2.3rem 3rem;
+      width: 29rem;
+      padding: 2.3rem 2rem;
     }
 
     &__left {

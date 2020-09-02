@@ -354,6 +354,7 @@
   .contacts__inner {
     justify-content: center;
   }
+
   .contacts__form-wrapper {
     flex-direction: column;
   }
@@ -361,12 +362,19 @@
   .contacts__form-item {
     margin-right: 0;
     margin-bottom: 1rem;
-    width: 11rem;
+    width: 20rem;
   }
 
   .contacts__form-input {
     margin-bottom: 1rem;
+    width: 100%;
+    margin-right: 0;
   }
+
+  .contacts__form-btn.btn {
+    width: 100%;
+  }
+
   .contacts__mid {
     margin-bottom: 3rem;
   }

@@ -186,16 +186,20 @@
 
 @media (max-width: 567px) {
   .bullets {
+    .container {
+      max-width: 100%;
+    }
+
     &__item {
       margin-right: 0;
-      margin: 3rem;
+      margin: 1rem;
 
       &:nth-child(2) {
-        margin: 3rem;
+        margin: 1rem;
       }
 
       &:last-child {
-        margin: 3rem;
+        margin: 1rem;
       }
     }
   }

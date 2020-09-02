@@ -24,6 +24,7 @@
   }
 
   &__left {
+    height: 100%;
     width: 20.833vw;
     position: relative;
     padding: 1.198vw 2.083vw;
@@ -169,6 +170,30 @@
       border-radius: 30px;
       border: 1px solid #ebebeb;
       background-color: #ffffff;
+      position: relative;
+
+      &-hint {
+        position: absolute;
+        left: 50%;
+        bottom: 110%;
+        width: 100%;
+        color: #282828;
+        box-shadow: 4px 7px 17px -6px rgba(0, 0, 0, 0.46);
+        background-color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        z-index: 33;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        transition: opacity .6s;
+      }
+
+      &:hover:not(.active) {
+        .quiz__progress-item-hint {
+          opacity: 1;
+        }
+      }
 
       &.active {
         box-shadow: 0 43px 101px rgba(18, 127, 255, 0.2), inset 0 0 20px rgba(255, 249, 230, 0.1);
@@ -542,7 +567,11 @@
   &__loading {
     margin: 0 auto;
     width: 36.250vw;
+    min-height: 40rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &-bar {
       width: 100%;
@@ -1103,7 +1132,7 @@
 
 @media (max-width: 767px) {
   .quiz {
-    &__left {
+    &__left-wrap {
       display: none;
     }
   }

@@ -252,9 +252,31 @@ $(window).scroll(function () {
     if (isScrolledIntoView(this) === true) {
       $(this).addClass('active');
     }
-    else {
-      $(this).removeClass('active');
-    }
+
   });
+});
+
+$('.fancy-class, works__left-slider-top-item').fancybox({
+  buttons: [
+    'slideShow',
+    'zoom',
+    'fullScreen',
+    'close'
+  ],
+  animationEffect: "zoom-in-out",
+  animationDuration: 600,
+  transitionEffect: "circular",
+  transitionDuration: 420,
 
 });
+
+$('.js-btn').on('click', function () {
+  var href = $(this).attr('href');
+  $(href).fadeIn(500);
+});
+
+$('.modal__close').on('click', function () {
+  $('.modal-overlay').fadeOut(500);
+});
+
+new WOW().init();
