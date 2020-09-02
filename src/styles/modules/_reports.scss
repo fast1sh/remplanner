@@ -16,6 +16,7 @@
   }
 
   &__right {
+    margin-top: -10vw;
     width: 35%;
     position: relative;
   }
@@ -195,17 +196,18 @@
 
 @media (max-width: 567px) {
   .reports__inner {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
   .reports__left {
     width: 100%;
-    margin-bottom: 3rem;
   }
 
   .reports__right {
     width: auto;
+    margin-top: 0;
+    margin-bottom: 3rem;
   }
 
   .reports__slider-top-img {

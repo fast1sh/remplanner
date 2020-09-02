@@ -26,14 +26,6 @@ $('.works__left-slider-bot').slick({
   focusOnSelect: true
 });
 
-$(".twentytwenty-container").twentytwenty({
-  default_offset_pct: 0.25, // How much of the before image is visible when the page loads
-  no_overlay: true, //Do not show the overlay with before and after
-  move_slider_on_hover: true, // Move slider on mouse hover?
-  move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
-  click_to_move: false 
-});
-
 $('.reports__slider-top').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -331,3 +323,48 @@ function get_cookie(cookie_name) {
 new WOW().init();
 
 $('input[name="phone"]').mask('+7(999) 999-9999');
+
+var toTop = $('.to-top');
+
+toTop.on('click', topFunction);
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    toTop.addClass('active');
+  } else {
+    toTop.removeClass('active');
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; 
+}
+
+$(document).ready(function ($) {
+  var offsetTop2 = $('.after').offset().top - $(window).height() - 110;
+  var lbl = false;
+  $(window).scroll(function (event) {
+    offsetTop2 = $('.after').offset().top - $(window).height() - 110;
+    if ($(document).scrollTop() > offsetTop2) {
+
+      if (!lbl) {
+        $(".twentytwenty-container").each(function (index, el) {
+          $(this).twentytwenty({
+            default_offset_pct: 0.25, // How much of the before image is visible when the page loads
+            no_overlay: true, //Do not show the overlay with before and after
+            move_slider_on_hover: true, // Move slider on mouse hover?
+            move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement. 
+            click_to_move: false
+          });
+        });
+
+        lbl = true;
+      }
+    }
+  });
+
+
+});
